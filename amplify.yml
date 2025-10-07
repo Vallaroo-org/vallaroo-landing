@@ -6,10 +6,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Install dependencies
-        - npm ci
+        # Install dependencies with legacy peer deps to resolve conflicts
+        - npm ci --legacy-peer-deps
         # Clear Next.js cache
         - rm -rf .next
+        # Clear out directory
+        - rm -rf out
     build:
       commands:
         # Build the Next.js application
