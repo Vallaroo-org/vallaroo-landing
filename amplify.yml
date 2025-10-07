@@ -1,41 +1,23 @@
-# AWS Amplify Build Configuration for Vallaroo Landing Page
-# This file configures the build and deployment settings for AWS Amplify
-
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        # Set Node.js options for better memory management
-        - export NODE_OPTIONS="--max-old-space-size=4096"
-        # Install dependencies with legacy peer deps to resolve conflicts
-        - npm ci --legacy-peer-deps --no-audit --no-fund
-        # Clear Next.js cache
-        - rm -rf .next
-        # Clear out directory
-        - rm -rf out
-        # Verify Node.js version
+        - echo "Node version:"
         - node --version
-        # Verify npm version
+        - echo "NPM version:"
         - npm --version
+        - npm ci --legacy-peer-deps --no-audit --no-fund
+        - rm -rf .next
+        - rm -rf out
     build:
       commands:
-        # Set Node.js options for build
-        - export NODE_OPTIONS="--max-old-space-size=4096"
-        # Build the Next.js application (includes static export)
-        - npm run build:amplify
-        # Verify out directory was created
-        - ls -la out/
+        - NODE_OPTIONS="--max-old-space-size=4096" npm run build:amplify
   artifacts:
-    # Directory to be deployed
     baseDirectory: out
     files:
       - '**/*'
   cache:
     paths:
-      # Cache node_modules for faster builds
       - node_modules/**/*
-      # Cache Next.js build cache
       - .next/cache/**/*
-      # Cache npm cache
-      - ~/.npm/**/*

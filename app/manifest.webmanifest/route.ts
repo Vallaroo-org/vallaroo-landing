@@ -3,8 +3,8 @@ import { MetadataRoute } from 'next'
 // Required for static export
 export const dynamic = 'force-static'
 
-export default function manifest(): MetadataRoute.Manifest {
-  return {
+export async function GET(): Promise<Response> {
+  const manifest: MetadataRoute.Manifest = {
     name: 'Vallaroo - Complete Shop Management Platform',
     short_name: 'Vallaroo',
     description: 'Complete shop management platform for modern businesses. Manage your shop, products, customers, and orders all in one place.',
@@ -40,8 +40,10 @@ export default function manifest(): MetadataRoute.Manifest {
       },
     ],
   }
+
+  return new Response(JSON.stringify(manifest), {
+    headers: {
+      'Content-Type': 'application/manifest+json',
+    },
+  })
 }
-
-
-
-
