@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"src/layout/Topbar/index.tsx -> ./component/MobileMenu":{"id":6407,"files":["static/chunks/407.d66c2620fa5e7b14.js"]},"src/layout/Topbar/index.tsx -> ./component/NavMenu":{"id":3664,"files":["static/chunks/664.96c35d9af1f5d90e.js"]},"src/wrappers/AppProvidersWrapper.tsx -> preline/dist/preline":{"id":4431,"files":["static/chunks/7bf6c15d.a472913a3b811f6a.js"]}}';

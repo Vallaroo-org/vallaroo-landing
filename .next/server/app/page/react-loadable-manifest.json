@@ -1,1 +1,16 @@
-{}
+{
+  "[project]/src/layout/Topbar/component/NavMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/layout/Topbar/component/NavMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_887be4e4._.js",
+      "static/chunks/src_layout_Topbar_component_NavMenu_tsx_e3d6546f._.js"
+    ]
+  },
+  "[project]/src/layout/Topbar/component/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/layout/Topbar/component/MobileMenu.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_1ad03e89._.js",
+      "static/chunks/src_layout_Topbar_component_MobileMenu_tsx_e3d6546f._.js"
+    ]
+  }
+}

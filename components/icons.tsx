@@ -17,9 +17,10 @@ export const Logo: React.FC<LogoProps> = ({
   return (
     <img 
       src="/vallaroo-logo-black.png" 
-      width={"96px"}
+      width={width || "80px"}
+      height={height || "40px"}
       alt="Vallaroo Logo"
-      className="dark:hidden"
+      className="dark:hidden w-16 sm:w-20 md:w-24 h-auto"
       {...props}
     />
   );
@@ -34,9 +35,10 @@ export const LogoDark: React.FC<LogoProps> = ({
   return (
     <img 
       src="/vallaroo-logo-white.png" 
-      width={"96px"}
+      width={width || "80px"}
+      height={height || "40px"}
       alt="Vallaroo Logo"
-      className="hidden dark:block"
+      className="hidden dark:block w-16 sm:w-20 md:w-24 h-auto"
       {...props}
     />
   );
@@ -196,6 +198,97 @@ export const SearchIcon = (props: IconSvgProps) => (
     />
     <path
       d="M22 22L20 20"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    />
+  </svg>
+);
+
+export const ArrowLeftIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M15.5 19l-7-7 7-7"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
+export const ShareIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+    />
+    <path
+      d="m8 12 8-8M8 12l8 8"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
+export const PlusIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M12 5v14M5 12h14"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+    />
+  </svg>
+);
+
+export const MinusIcon = (props: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height="1em"
+    role="presentation"
+    viewBox="0 0 24 24"
+    width="1em"
+    {...props}
+  >
+    <path
+      d="M5 12h14"
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"

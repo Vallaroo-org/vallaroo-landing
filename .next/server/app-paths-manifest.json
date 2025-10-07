@@ -1,6 +1,11 @@
 {
-  "/page": "app/page.js",
-  "/pricing/page": "app/pricing/page.js",
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/(pages)/about/page": "app/(pages)/about/page.js",
+  "/(pages)/blog/page": "app/(pages)/blog/page.js",
+  "/(pages)/contact/page": "app/(pages)/contact/page.js",
+  "/(pages)/features/page": "app/(pages)/features/page.js",
+  "/(pages)/pricing/page": "app/(pages)/pricing/page.js",
+  "/(pages)/products/b2b/page": "app/(pages)/products/b2b/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/page": "app/page.js"
 }

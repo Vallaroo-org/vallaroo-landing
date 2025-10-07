@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@nextui-org/button";
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <Button radius="full" onPress={() => setCount(count + 1)}>
+    <button 
+      onClick={() => setCount(count + 1)}
+      className="bg-primary text-dark px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
+    >
       Count is {count}
-    </Button>
+    </button>
   );
 };
