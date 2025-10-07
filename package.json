@@ -6,7 +6,8 @@
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint --fix"
+		"lint": "next lint --fix",
+		"export": "next build && next export"
 	},
 	"dependencies": {
 		"@iconify/react": "^4.1.1",

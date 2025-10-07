@@ -1,0 +1,31 @@
+# AWS Amplify Build Configuration for Vallaroo Landing Page
+# This file configures the build and deployment settings for AWS Amplify
+
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # Install dependencies
+        - npm ci
+        # Clear Next.js cache
+        - rm -rf .next
+    build:
+      commands:
+        # Build the Next.js application
+        - npm run build
+        # Export static files for Amplify
+        - npm run export
+  artifacts:
+    # Directory to be deployed
+    baseDirectory: out
+    files:
+      - '**/*'
+  cache:
+    paths:
+      # Cache node_modules for faster builds
+      - node_modules/**/*
+      # Cache Next.js build cache
+      - .next/cache/**/*
+      # Cache npm cache
+      - ~/.npm/**/*
