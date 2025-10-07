@@ -17,9 +17,9 @@ const nextConfig = {
   },
   
   // Disable server-side features for static export
-  experimental: {
-    esmExternals: false,
-  },
+  // experimental: {
+  //   esmExternals: false,
+  // },
 }
 
 module.exports = nextConfig

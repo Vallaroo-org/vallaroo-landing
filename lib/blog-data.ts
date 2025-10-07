@@ -1113,4 +1113,8 @@ export function getRecentPosts(limit: number = 3): BlogPost[] {
     .slice(0, limit);
 }
 
+export function getAllBlogPosts(): BlogPost[] {
+  return blogPosts;
+}
+
 
