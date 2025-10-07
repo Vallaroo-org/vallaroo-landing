@@ -1,0 +1,180 @@
+# Netlify Configuration for Vallaroo Landing Page
+# This file configures the build and deployment settings for Netlify
+
+[build]
+  # Build command for Next.js
+  command = "npm run build"
+  
+  # Publish directory (Next.js output)
+  publish = ".next"
+  
+  # Functions directory (if using Netlify Functions)
+  functions = "netlify/functions"
+
+[build.environment]
+  # Node.js version
+  NODE_VERSION = "18"
+  
+  # NPM version
+  NPM_VERSION = "9"
+  
+  # Next.js configuration
+  NEXT_TELEMETRY_DISABLED = "1"
+  
+  # Build optimization
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Redirects configuration
+[[redirects]]
+  # Redirect www to non-www (optional)
+  from = "https://www.vallaroo.com/*"
+  to = "https://vallaroo.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Redirect HTTP to HTTPS
+  from = "http://vallaroo.com/*"
+  to = "https://vallaroo.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Redirect HTTP www to HTTPS
+  from = "http://www.vallaroo.com/*"
+  to = "https://vallaroo.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  # Handle Next.js routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.vallaroo.com https://www.google-analytics.com; frame-src 'self' https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+# Cache static assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.eot"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Cache HTML files for shorter time
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Netlify Forms configuration
+[[headers]]
+  for = "/contact"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Sitemap and robots.txt
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+
+# Plugin configuration
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  
+  [plugins.inputs]
+    output_path = "lighthouse-report.html"
+    
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.9
+
+# Branch deploy configuration
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+# Edge functions (if needed)
+[[edge_functions]]
+  function = "hello"
+  path = "/api/hello"
