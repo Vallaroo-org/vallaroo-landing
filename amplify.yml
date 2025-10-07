@@ -14,10 +14,8 @@ frontend:
         - rm -rf out
     build:
       commands:
-        # Build the Next.js application
+        # Build the Next.js application (includes static export)
         - npm run build
-        # Export static files for Amplify
-        - npm run export
   artifacts:
     # Directory to be deployed
     baseDirectory: out
