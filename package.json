@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint --fix",
-		"export": "next build"
+		"export": "next build",
+		"build:amplify": "NODE_OPTIONS='--max-old-space-size=4096' next build"
 	},
 	"dependencies": {
 		"@iconify/react": "^4.1.1",

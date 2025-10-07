@@ -6,16 +6,26 @@ frontend:
   phases:
     preBuild:
       commands:
+        # Set Node.js options for better memory management
+        - export NODE_OPTIONS="--max-old-space-size=4096"
         # Install dependencies with legacy peer deps to resolve conflicts
-        - npm ci --legacy-peer-deps
+        - npm ci --legacy-peer-deps --no-audit --no-fund
         # Clear Next.js cache
         - rm -rf .next
         # Clear out directory
         - rm -rf out
+        # Verify Node.js version
+        - node --version
+        # Verify npm version
+        - npm --version
     build:
       commands:
+        # Set Node.js options for build
+        - export NODE_OPTIONS="--max-old-space-size=4096"
         # Build the Next.js application (includes static export)
-        - npm run build
+        - npm run build:amplify
+        # Verify out directory was created
+        - ls -la out/
   artifacts:
     # Directory to be deployed
     baseDirectory: out
