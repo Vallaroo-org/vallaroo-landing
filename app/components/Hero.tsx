@@ -23,12 +23,22 @@ const Hero = () => {
                             <p className="lg:mt-5 lg:mb-12.5 mt-2.5 mb-5 text-white">
                                 Power your retail business with Vallaroo's comprehensive B2B and B2C platform. Streamline inventory, orders, and customer management across all locations.
                             </p>
-                            <Link
-                                href="/products/b2b"
-                                className="py-3.5 md:px-7.5 px-6 inline-flex bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:bg-primary"
-                            >
-                                Start now, it's free!
-                            </Link>
+                            <div className="flex flex-wrap gap-4">
+                                <Link
+                                    href="https://app.vallaroo.com"
+                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:bg-primary"
+                                >
+                                    Start now, it's free!
+                                </Link>
+                                <Link
+                                    href="/downloads/vallaroo.apk"
+                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-transparent border border-white font-medium rounded-2xl text-white transition-all duration-300 hover:bg-white/10"
+                                    download
+                                >
+                                    <IconifyIconClient icon="tabler:download" className="mr-2 text-xl" />
+                                    Download App
+                                </Link>
+                            </div>
 
 
                             {/* Apps ratings can be included in future versions */}
@@ -52,9 +62,9 @@ const Hero = () => {
                         </div>
                         <div>
                             <div className="relative">
-                                <Image 
-                                    src={hero} 
-                                    alt="Vallaroo Hero - Business Management Dashboard" 
+                                <Image
+                                    src={hero}
+                                    alt="Vallaroo Hero - Business Management Dashboard"
                                     className="rounded-2xl"
                                     quality={100}
                                     priority

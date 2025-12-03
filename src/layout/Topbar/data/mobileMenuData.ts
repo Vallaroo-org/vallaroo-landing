@@ -22,13 +22,13 @@ export const mobileMenuData: MenuItem[] = [
     children: [
       {
         label: 'B2B Application',
-        href: '/products/b2b',
+        href: 'https://app.vallaroo.com',
         icon: 'tabler:building-store',
         description: 'Shop management platform for businesses.',
       },
       {
         label: 'B2C Application (Free)',
-        href: '/products/b2c',
+        href: 'https://app.vallaroo.com',
         icon: 'tabler:shopping-cart',
         description: 'Free customer shopping experience.',
       },

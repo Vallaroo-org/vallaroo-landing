@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import AppProvidersWrapper from '@/src/wrappers/AppProvidersWrapper';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -30,6 +31,20 @@ export default function RootLayout({
             <body className={inter.variable}>
                 {children}
                 <AppProvidersWrapper />
+                
+                {/* Simple Analytics - 100% privacy-first analytics */}
+                <Script
+                    src="https://scripts.simpleanalyticscdn.com/latest.js"
+                    data-collect-dnt="true"
+                    strategy="afterInteractive"
+                />
+                <noscript>
+                    <img 
+                        src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" 
+                        alt="" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
+                </noscript>
             </body>
         </html>
     );

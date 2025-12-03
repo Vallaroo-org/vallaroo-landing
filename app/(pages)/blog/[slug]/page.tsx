@@ -3,10 +3,6 @@ import Link from "next/link";
 import IconifyIconClient from "@/src/IconifyIconClient";
 import { getBlogPostById, getRecentPosts, getAllBlogPosts } from "@/lib/blog-data";
 
-// Required for static export
-export const dynamic = 'force-static'
-
-// Generate static params for all blog posts
 export async function generateStaticParams() {
   const posts = getAllBlogPosts();
   return posts.map((post) => ({

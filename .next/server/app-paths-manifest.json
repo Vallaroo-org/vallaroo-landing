@@ -1,18 +1,5 @@
 {
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/docs/page": "app/docs/page.js",
-  "/(pages)/contact/page": "app/(pages)/contact/page.js",
-  "/(pages)/features/page": "app/(pages)/features/page.js",
-  "/(pages)/blog/page": "app/(pages)/blog/page.js",
-  "/(pages)/products/b2b/page": "app/(pages)/products/b2b/page.js",
-  "/(pages)/careers/page": "app/(pages)/careers/page.js",
-  "/(pages)/about/page": "app/(pages)/about/page.js",
-  "/(pages)/faqs/page": "app/(pages)/faqs/page.js",
-  "/(pages)/products/b2c/page": "app/(pages)/products/b2c/page.js",
-  "/(pages)/pricing/page": "app/(pages)/pricing/page.js",
-  "/(pages)/blog/[slug]/page": "app/(pages)/blog/[slug]/page.js"
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/page": "app/page.js"
 }

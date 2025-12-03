@@ -15,16 +15,16 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <Link href="/">
-                <Image 
-                  src="/vallaroo-logo-white.png" 
-                  alt="Vallaroo Logo" 
-                  className="h-11" 
+                <Image
+                  src="/vallaroo-logo-white.png"
+                  alt="Vallaroo Logo"
+                  className="h-11"
                   width={140}
                   height={44}
                 />
               </Link>
               <p className="mt-4 text-white/80 text-sm leading-relaxed">
-                Complete shop management platform for modern businesses. Streamline operations, 
+                Complete shop management platform for modern businesses. Streamline operations,
                 boost productivity, and grow your business with our powerful B2B and B2C solutions.
               </p>
               <div className="mt-6 flex items-center gap-3">
@@ -46,7 +46,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link
-                    href="/products/b2b"
+                    href="https://app.vallaroo.com"
                     className="text-white/80 hover:text-primary transition-colors text-sm"
                   >
                     B2B Application
@@ -54,7 +54,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/products/b2c"
+                    href="https://app.vallaroo.com"
                     className="text-white/80 hover:text-primary transition-colors text-sm"
                   >
                     B2C Application (Free)
@@ -187,7 +187,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <IconifyIconClient icon="tabler:mail" className="text-primary text-sm" />
@@ -218,32 +218,32 @@ const Footer = () => {
               <div className="flex items-center gap-6">
                 <span className="text-white font-medium">Follow us:</span>
                 <div className="flex gap-4">
-                  <Link 
-                    href="https://linkedin.com/company/vallaroo" 
+                  <Link
+                    href="https://linkedin.com/company/vallaroo"
                     className="text-white/60 hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <IconifyIconClient icon="tabler:brand-linkedin" className="text-xl" />
                   </Link>
-                  <Link 
-                    href="https://twitter.com/vallaroo" 
+                  <Link
+                    href="https://twitter.com/vallaroo"
                     className="text-white/60 hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <IconifyIconClient icon="tabler:brand-x" className="text-xl" />
                   </Link>
-                  <Link 
-                    href="https://facebook.com/vallaroo" 
+                  <Link
+                    href="https://facebook.com/vallaroo"
                     className="text-white/60 hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <IconifyIconClient icon="tabler:brand-facebook" className="text-xl" />
                   </Link>
-                  <Link 
-                    href="https://youtube.com/@vallaroo" 
+                  <Link
+                    href="https://youtube.com/@vallaroo"
                     className="text-white/60 hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -252,7 +252,7 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <span className="text-white/60 text-sm">Trusted by 10,000+ businesses</span>
                 <div className="flex items-center gap-2">

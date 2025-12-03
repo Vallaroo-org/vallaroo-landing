@@ -1,20 +1,20 @@
 {
   "src/layout/Topbar/index.tsx -> ./component/MobileMenu": {
-    "id": 6407,
+    "id": 146,
     "files": [
-      "static/chunks/407.d66c2620fa5e7b14.js"
+      "static/chunks/146.84ab72852ce9c81f.js"
     ]
   },
   "src/layout/Topbar/index.tsx -> ./component/NavMenu": {
-    "id": 3664,
+    "id": 9784,
     "files": [
-      "static/chunks/664.96c35d9af1f5d90e.js"
+      "static/chunks/403.5258711b4249055a.js"
     ]
   },
   "src/wrappers/AppProvidersWrapper.tsx -> preline/dist/preline": {
-    "id": 4431,
+    "id": 480,
     "files": [
-      "static/chunks/7bf6c15d.a472913a3b811f6a.js"
+      "static/chunks/7bf6c15d.c3d07d2429dbade8.js"
     ]
   }
 }

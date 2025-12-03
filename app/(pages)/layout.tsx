@@ -13,3 +13,5 @@ const PagesLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
 };
 
 export default PagesLayout;
+
+
