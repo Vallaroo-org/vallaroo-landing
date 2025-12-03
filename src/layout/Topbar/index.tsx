@@ -43,10 +43,12 @@ const Topbar = () => {
                         <div className="flex flex-row justify-center items-center md:gap-4 gap-2.5">
                             <div className="md:flex hidden gap-4">
                                 <Link
-                                    href="https://app.vallaroo.com"
-                                    className="bg-dark text-white hover:text-dark hover:bg-primary rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300"
+                                    href="/downloads/vallaroo.apk"
+                                    className="bg-dark text-white hover:text-dark hover:bg-primary rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300 text-center"
+                                    download
                                 >
-                                    Try B2B App
+                                    <div>Download Shop App</div>
+                                    <div className="text-[10px] opacity-80 leading-none mt-1">(Android Only)</div>
                                 </Link>
                                 <Link
                                     href="https://app.vallaroo.com"

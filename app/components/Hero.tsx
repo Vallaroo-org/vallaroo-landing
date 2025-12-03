@@ -32,11 +32,14 @@ const Hero = () => {
                                 </Link>
                                 <Link
                                     href="/downloads/vallaroo.apk"
-                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-transparent border border-white font-medium rounded-2xl text-white transition-all duration-300 hover:bg-white/10"
+                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-transparent border border-white font-medium rounded-2xl text-white transition-all duration-300 hover:bg-white/10 flex-col items-center justify-center"
                                     download
                                 >
-                                    <IconifyIconClient icon="tabler:download" className="mr-2 text-xl" />
-                                    Download App
+                                    <div className="flex items-center">
+                                        <IconifyIconClient icon="tabler:download" className="mr-2 text-xl" />
+                                        Download Shop App
+                                    </div>
+                                    <span className="text-[10px] opacity-80 mt-0.5">(Android Only)</span>
                                 </Link>
                             </div>
 
