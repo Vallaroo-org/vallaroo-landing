@@ -52,7 +52,7 @@ const Topbar = () => {
                                 </Link>
                                 <Link
                                     href="https://app.vallaroo.com"
-                                    className="bg-green-600 text-white hover:text-green-700 hover:bg-green-500 rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300"
+                                    className="bg-green-600 text-white hover:text-green-700 hover:bg-green-500 rounded-2xl px-7.5 py-3.5 font-medium transition-all duration-300 flex items-center justify-center h-full"
                                 >
                                     B2C App (Free)
                                 </Link>

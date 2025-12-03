@@ -26,13 +26,13 @@ const Hero = () => {
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="https://app.vallaroo.com"
-                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:bg-primary"
+                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-white font-medium rounded-2xl text-dark transition-all duration-300 hover:bg-primary items-center justify-center h-[60px]"
                                 >
                                     Start now, it's free!
                                 </Link>
                                 <Link
                                     href="/downloads/vallaroo.apk"
-                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-transparent border border-white font-medium rounded-2xl text-white transition-all duration-300 hover:bg-white/10 flex-col items-center justify-center"
+                                    className="py-3.5 md:px-7.5 px-6 inline-flex bg-transparent border border-white font-medium rounded-2xl text-white transition-all duration-300 hover:bg-white/10 flex-col items-center justify-center h-[60px]"
                                     download
                                 >
                                     <div className="flex items-center">
